@@ -1,0 +1,27 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel"]   # what pip needs to build the project
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "lyrics_search"
+version         = "0.1.0"
+readme          = "README.md"
+license         = {file = "LICENSE"}
+authors         = [{name = "Patrick MacLea", email = "macleapatrick@gmail.com"}]
+requires-python = ">=3.9"
+
+dependencies = [
+  "requests>=2.32",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "black>=24",
+  "ruff>=0.4",
+]
+
+[tool.setuptools]
+packages = ["lyrics_search"]
+
+[tool.setuptools.package-data]
