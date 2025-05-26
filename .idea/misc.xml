@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.9 virtualenv at ~/.pyenv/versions/tune-tangle" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 virtualenv at ~/.pyenv/versions/lyrics_search" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 virtualenv at ~/.pyenv/versions/lyrics_embedder" project-jdk-type="Python SDK" />
 </project>

@@ -34,7 +34,7 @@ def main():
     BATCH_SIZE = 500  # Tune this to your memory/throughput constraints
     query_base = {
         "language_cld3": "en",
-        "views": {"$gt": 10000},
+        "views": {"$gt": 5000},
         "prompted_embedding": {"$exists": False}
     }
     projection = {
