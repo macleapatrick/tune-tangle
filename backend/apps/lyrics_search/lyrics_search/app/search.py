@@ -5,7 +5,7 @@ from .schemas import (
     SearchHit,
 )
 
-from .core import Client, COLLECTION
+from .core import COLLECTION
 
 def smart_search(
     query_str: str,

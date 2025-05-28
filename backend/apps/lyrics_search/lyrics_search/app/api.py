@@ -57,4 +57,4 @@ def vector_search_by_id(body: VectorSearchByIdIn):
 # -------- (unchanged) payload-only search ----------------------
 @router.post("/search/smart", response_model=list[SearchHit])
 def payload_search(body: SmartSearchIn):
-    return smart_search(body.query, client, limit=body.limit)
+    return smart_search(body.query, client.get_qdrant, limit=body.limit)
