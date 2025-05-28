@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 # ── Request models ──────────────────────────────────────────────
 class VectorSearchByTextIn(BaseModel):
-    lyrics: str = Field(..., example="Hello darkness my old friend")
+    query: str = Field(..., example="Hello darkness my old friend")
     limit: int = Field(5, ge=1, le=50)
 
 class VectorSearchByIdIn(BaseModel):

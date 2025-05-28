@@ -5,7 +5,7 @@ from .schemas import (
     SearchHit,
 )
 
-from .core import get_qdrant, COLLECTION
+from .core import Client, COLLECTION
 
 def smart_search(
     query_str: str,
@@ -16,7 +16,7 @@ def smart_search(
     Text-only search that matches query_str against `title`, `artist` Results are ordered by a RapidFuzz
     token-set ratio (0-1).  `limit` = how many hits to return.
     """
-    client = get_qdrant()
+    client = Client.get_qdrant
 
     # 1) OR-filter over the three fields
     qfilter = qm.Filter(
