@@ -9,6 +9,7 @@ from .core import Client, COLLECTION
 
 def smart_search(
     query_str: str,
+    client,
     limit: int = 20,
     overfetch: int = 100,
 ) -> List[SearchHit]:
@@ -16,7 +17,6 @@ def smart_search(
     Text-only search that matches query_str against `title`, `artist` Results are ordered by a RapidFuzz
     token-set ratio (0-1).  `limit` = how many hits to return.
     """
-    client = Client.get_qdrant
 
     # 1) OR-filter over the three fields
     qfilter = qm.Filter(
